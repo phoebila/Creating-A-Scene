@@ -1,0 +1,19 @@
+class Play extends Phaser.Scene {
+    constructor(){
+        super('playScene')
+        console.log('Play: constructor');
+    }
+
+    init(stats){
+        console.log('play: init');
+        // moving data packets from main menu -> play
+        this.HP = stats.HP
+        this.EXP = stats.EXP
+    }
+
+    create(){
+        console.log('Play: create');
+        console.log(`HP: ${this.HP} EXP: ${this.EXP}`)
+    }
+
+}
