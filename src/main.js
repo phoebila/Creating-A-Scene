@@ -7,6 +7,10 @@
 
 let config = {
     type: Phaser.AUTO,
+    render: {
+        // fixes pixel art blur
+        pixelArt: true
+    },
     scene: [MainMenu, Play]
 }
 

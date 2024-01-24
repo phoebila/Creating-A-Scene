@@ -14,6 +14,18 @@ class Play extends Phaser.Scene {
     create(){
         console.log('Play: create');
         console.log(`HP: ${this.HP} EXP: ${this.EXP}`)
+
+        this.scene.add('statsoverlayScene', StatsOverlay, false)
+        this.scene.launch('statsoverlayScene')
+
+        this.tomato = this.add.sprite(240, 240, 'tomato').setOrigin(0).setScale(2)
+
+
+    }
+
+    update (){
+        // console.log('play: update');
+        this.tomato.angle++
     }
 
 }
